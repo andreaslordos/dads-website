@@ -1,6 +1,7 @@
 /** @jsxImportSource theme-ui */
 import { sanityClient } from "../client"
 import { useState, useEffect } from "react";
+import Loading from "../components/Loading"
 import Paper from "../components/Paper";
 
 export default function Papers() {
@@ -22,7 +23,7 @@ export default function Papers() {
 
     
     if (!itemData) {
-        return "Loading...";
+        return Loading();
       } else {
         console.log(itemData);
       }
@@ -32,7 +33,7 @@ export default function Papers() {
         <div>
           {itemData.map((paper) => {
             return (
-              <Paper authors={paper.authors} event={paper.event} link={paper.link} title={paper.title}/>
+              <Paper key={paper._id} authors={paper.authors} event={paper.event} link={paper.link} title={paper.title}/>
             )
           })}
         </div>

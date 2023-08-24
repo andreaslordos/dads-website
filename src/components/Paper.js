@@ -1,6 +1,5 @@
 /** @jsxImportSource theme-ui */
 import { Themed } from '@theme-ui/mdx';
-import React from 'react';
 
 const paperSx = {
     textAlign: 'center',
@@ -22,11 +21,13 @@ export default function Paper(props) {
 
     return (
         <div sx={paperSx}>
+            <br/>
             <Themed.h2>{link ? <a href={link}>{title}</a> : title}</Themed.h2>
             <br />
             <Themed.h3>{highlightAuthor(authors)}</Themed.h3>
             <br />
             <Themed.h3><i>{event}</i></Themed.h3>
+            <br/>
             <hr />
         </div>
     );
