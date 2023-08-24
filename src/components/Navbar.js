@@ -1,0 +1,61 @@
+/** @jsxImportSource theme-ui */
+import { useLocation, Link } from "react-router-dom";
+import { Themed } from "@theme-ui/mdx";
+// Modified styles for responsiveness
+const navbarSx = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: ['3rem 2rem', '3rem 5rem'],  // Reduced padding for smaller screens
+    backgroundColor: '#ffffff',
+    position: 'sticky',
+    top: 0,
+    zIndex: 10,
+    flexWrap: 'wrap',  // Allows items to wrap to the next line if there's not enough space
+    marginBottom: "1rem",
+    width: "80%",
+};
+
+const linkSx = {
+  textDecoration: 'none',
+  color: '#333',
+  fontWeight: '800',
+  fontSize: '1.2rem',
+  minWidth: '120px',  // This ensures each link has a minimum width and won't break into multiple lines
+  textAlign: 'center',  // Centers text within the link
+  '&:hover': {
+    color: '#007BFF'
+  },
+  '&.active': {
+    borderBottom: '2px solid #007BFF'
+  }
+};
+
+export default function Navbar() {
+  const location = useLocation();
+  const sections = [
+    "George Lordos", "Updates", "Space", "Earth", "Papers", "Awards", "Press", "Contact"
+  ];
+  
+  return (
+    <div sx={navbarSx} className="navbar">
+        {sections.map((section, index) => {
+            // Determine the path for the section
+            const path = section === "George Lordos" 
+                ? "/" 
+                : `/${section.replace(" ", "").toLowerCase()}`;
+
+            return (
+                <Link
+                key={index}
+                to={path}
+                sx={linkSx}
+                className={location.pathname === path ? 'active' : ''}
+                >
+                <Themed.h3>{section}</Themed.h3>
+                </Link>
+            )
+        })}
+    </div>
+  );
+}
