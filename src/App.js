@@ -12,6 +12,7 @@ import Press from "./pages/Press"
 import Space from "./pages/Space"
 import Updates from "./pages/Updates"  
 import Homepage from "./pages/Homepage" 
+import ContentItem from "./pages/ContentItem"
 import PageNotFound from './pages/PageNotFound'
 
 import Navbar from './components/Navbar';
@@ -52,6 +53,7 @@ function App() {
                   <Route element={<Awards />} path="/awards" exact />
                   <Route element={<Press />} path="/press" exact />
                   <Route element={<Contact />} path="/contact" exact />
+                  <Route element={<ContentItem />} path="/content/:slug" />
                   <Route element={<PageNotFound />} path="*" />
                 </Routes>
               </div>
