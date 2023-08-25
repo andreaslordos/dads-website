@@ -6,7 +6,7 @@ export const theme = {
       heading: "EB Garamond, serif",
       monospace: "monospace",
     },
-    fontSizes: [18, 20, 22, 33, 43],
+    fontSizes: [18, 23, 25, 33, 43],
     fontWeights: {
       body: 400,
       medium: 500,
