@@ -46,7 +46,6 @@ function App() {
               <div className="mainContent" style={appSx}>
                 <Routes>
                   <Route element={<Homepage />} path="/" exact />
-                  <Route element={<Updates />} path="/updates" exact />
                   <Route element={<Space />} path="/space" exact />
                   <Route element={<Earth />} path="/earth" exact />
                   <Route element={<Papers />} path="/papers" exact />

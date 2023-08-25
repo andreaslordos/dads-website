@@ -34,7 +34,7 @@ const linkSx = {
 export default function Navbar() {
   const location = useLocation();
   const sections = [
-    "George Lordos", "Updates", "Space", "Earth", "Papers", "Awards", "Press", "Contact"
+    "George Lordos", "Space", "Earth", "Papers", "Awards", "Press", "Contact"
   ];
   
   return (
