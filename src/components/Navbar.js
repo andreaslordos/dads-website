@@ -6,7 +6,7 @@ const navbarSx = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: ['3rem 0rem', '3rem 0rem'],  // Reduced padding for smaller screens
+    padding: '3rem 0rem',  // Reduced padding for smaller screens
     backgroundColor: '#ffffff',
     position: 'sticky',
     top: 0,
@@ -14,6 +14,11 @@ const navbarSx = {
     flexWrap: 'wrap',  // Allows items to wrap to the next line if there's not enough space
     marginBottom: "1rem",
     width: "80%",
+
+    "@media (max-width: 835px)": {
+      width: "100%",
+      padding: '1.5rem 0.5rem',
+    }
 };
 
 const linkSx = {
@@ -28,6 +33,10 @@ const linkSx = {
   },
   '&.active': {
     borderBottom: '2px solid #007BFF'
+  },
+  "@media (max-width: 835px)": {
+    minWidth: "10px",
+    paddingInline: "10px",
   }
 };
 

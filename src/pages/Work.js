@@ -11,7 +11,7 @@ const workSx = {
     justifyContent: 'space-between', // Change this as per your design requirements
 
     ".previewSquare": {
-        flex: ['1 1 calc(50% - 16px)', '1 1 calc(25.333% - 16px)'], // Responsive item width
+        flex: '1 1 calc(25.333% - 16px)', // 100% width on small screens, 25.333% on larger screens
         margin: 2, // Margin between items
     },
 
@@ -19,6 +19,12 @@ const workSx = {
 
     a: {
         color: '#000',
+    },
+
+    "@media (max-width: 835px)": {
+        ".previewSquare": {
+            flex: '1 1 100%',
+        }
     }
 };
 

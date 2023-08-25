@@ -31,6 +31,22 @@ const homepageSx = {
     ".welcomeMessage": {
         paddingInline: "3rem",
     },
+
+    "@media (max-width: 835px)": {
+        ".updatesAndPic": {
+            flexDirection: "column-reverse",
+        },
+        ".updates": {
+            width: "100%",
+            padding: "1.5rem",
+        },
+        ".pic": {
+            padding: "1.5rem",
+        },
+        ".welcomeMessage": {
+            paddingInline: "0rem",
+        },
+    }
 };
 
 export default function Homepage() {

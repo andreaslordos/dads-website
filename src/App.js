@@ -23,7 +23,11 @@ const appSx = {
   minHeight: "100vh",
   flexDirection: "column",
   marginTop: "0em",
-  minHeight: "-webkit-fill-available"
+  minHeight: "-webkit-fill-available",
+
+  "@media (max-width: 835px)": {
+    width: "85%",
+  },
 };
 
 const containerSx = {
@@ -41,9 +45,9 @@ function App() {
   return (
     <ThemeUIProvider theme={theme}>
         <BrowserRouter>
-          <div style={containerSx}>
+          <div sx={containerSx}>
               <Navbar/>
-              <div className="mainContent" style={appSx}>
+              <div className="mainContent" sx={appSx}>
                 <Routes>
                   <Route element={<Homepage />} path="/" exact />
                   <Route element={<Space />} path="/space" exact />
