@@ -8,9 +8,6 @@ import { Themed } from "@theme-ui/mdx";
 
 const pageSx = {
     textAlign: 'center',
-    a: {
-      color: '#000',
-    }
 }
 
 export default function Contact() {
