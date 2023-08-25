@@ -36,6 +36,12 @@ export default defineType({
         description: 'Optional',
         type: 'url',
       }),
-
+    defineField({
+        name: 'index',
+        title: 'Index',
+        description: 'Four digit number, starting from 0000 (first) and ending with 9999 (last)',
+        type: 'string',
+        validation: Rule => Rule.required().min(4).max(4)
+      }),
   ],
 })

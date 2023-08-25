@@ -19,5 +19,12 @@ export default defineType({
         description: 'Add the different names of publications and the link here. E.g. "BBC, MIT News", line seperated, with each publication name hyperlinking to the relevant news article.',
         validation: Rule => Rule.required()
       }),
+    defineField({
+        name: 'index',
+        title: 'Index',
+        description: 'Four digit number, starting from 0000 (first) and ending with 9999 (last)',
+        type: 'string',
+        validation: Rule => Rule.required().min(4).max(4)
+      }),
   ],
 })
