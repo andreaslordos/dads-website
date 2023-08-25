@@ -3,7 +3,7 @@ import { sanityClient } from "../client"
 import { useState, useEffect } from "react";
 import Loading from "../components/Loading"
 import SpacePreview from "../components/SpacePreview";
-
+import { Themed } from "@theme-ui/mdx";
 
 const spaceSx = {
     display: 'flex',
@@ -13,7 +13,17 @@ const spaceSx = {
     ".previewSquare": {
         flex: ['1 1 calc(50% - 16px)', '1 1 calc(25.333% - 16px)'], // Responsive item width
         margin: 2, // Margin between items
+    },
+
+    marginTop: '3vh',
+
+    a: {
+        color: '#000',
     }
+};
+
+const pageSx = {
+    textAlign: 'center',
 };
 
 export default function Space() {
@@ -42,14 +52,17 @@ export default function Space() {
     }
 
     return (
-        <div sx={spaceSx}>
-          {itemData.map((space) => (
-                <div className="previewSquare">
-                    <a href={"content/" + space.slug.current}>
-                        <SpacePreview key={space._id} title={space.title} image={space.mainImage} />
-                    </a>
-                </div>
-          ))}
+        <div sx={pageSx}>
+            <Themed.h1>Space</Themed.h1>
+            <div className="spaceGrid" sx={spaceSx}>
+            {itemData.map((space) => (
+                    <div className="previewSquare">
+                        <a href={"content/" + space.slug.current}>
+                            <SpacePreview key={space._id} title={space.title} image={space.mainImage} />
+                        </a>
+                    </div>
+            ))}
+            </div>
         </div>
     );
 }

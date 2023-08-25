@@ -6,7 +6,7 @@ const navbarSx = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: ['3rem 2rem', '3rem 5rem'],  // Reduced padding for smaller screens
+    padding: ['3rem 0rem', '3rem 0rem'],  // Reduced padding for smaller screens
     backgroundColor: '#ffffff',
     position: 'sticky',
     top: 0,
