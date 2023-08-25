@@ -15,12 +15,12 @@ export const customComponents = {
       pre: ({ children }) => <pre>{children}</pre>,
     },
     list: {
-      bullet: ({ children }) => <ul className="mt-xl">{children}</ul>,
+      bullet: ({ children }) => <Themed.ul className="mt-xl">{children}</Themed.ul>,
       number: ({ children }) => <ol className="mt-lg">{children}</ol>,
     },
     listItem: {
       bullet: ({ children }) => (
-        <li style={{ listStyleType: "disclosure-closed" }}>{children}</li>
+        <li style={{ }}>{children}</li>
       ),
       number: ({ children }) => (
         <li style={{ listStyleType: "disclosure-closed" }}>{children}</li>

@@ -15,7 +15,7 @@ export default function Awards() {
     useEffect(() => {
         sanityClient
           .fetch(
-            `*[_type == "award"]  | order(publishedAt desc) {
+            `*[_type == "award"]  | order(index asc) {
                 ...
             }`
           )

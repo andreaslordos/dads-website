@@ -18,6 +18,12 @@ const contentSx = {
     },
     gap: "2em",
     paddingBottom: "2em",
+
+    "@media (max-width: 835px)": {
+        img: {
+            maxWidth: "100%",
+        }
+    },
 };
 
 export default function ContentItem(props) {

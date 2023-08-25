@@ -15,7 +15,7 @@ export default function Press() {
     useEffect(() => {
         sanityClient
           .fetch(
-            `*[_type == "press"]  | order(publishedAt desc) {
+            `*[_type == "press"]  | order(index asc) {
                 ...
             }`
           )

@@ -19,7 +19,7 @@ export default function Papers() {
     useEffect(() => {
         sanityClient
           .fetch(
-            `*[_type == "paper"]  | order(publishedAt desc) {
+            `*[_type == "paper"]  | order(index asc) {
                 ...
             }`
           )
