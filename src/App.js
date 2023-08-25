@@ -17,6 +17,8 @@ import PageNotFound from './pages/PageNotFound'
 
 import Navbar from './components/Navbar';
 
+import ScrollToTop from "./components/ScrollToTop";
+
 const appSx = {
   width: "67%",
   display: "flex",
@@ -49,6 +51,7 @@ function App() {
           <div sx={containerSx}>
               <Navbar/>
               <div className="mainContent" sx={appSx}>
+                <ScrollToTop/>
                 <Routes>
                   <Route element={<Homepage />} path="/" exact />
                   <Route element={<Space />} path="/space" exact />
