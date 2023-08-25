@@ -36,6 +36,7 @@ const containerSx = {
   alignItems: 'center',  // Horizontally centers the child elements
   justifyContent: 'flex-start', // Optional, aligns children vertically to the start. You can also use 'center' to center them vertically.
   width: '100%', // This ensures that the container takes up the full width of its parent
+  paddingBottom: "5rem",
 };
 
 
