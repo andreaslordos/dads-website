@@ -6,9 +6,18 @@ import Loading from '../components/Loading';
 import { useEffect, useState } from 'react';
 import { sanityClient } from '../client';
 import { useParams } from 'react-router-dom';
+import { urlFor } from '../utils/urlFor';
 
 const contentSx = {
     textAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    img: {
+        maxWidth: "50%",
+    },
+    gap: "2em",
+    paddingBottom: "2em",
 };
 
 export default function ContentItem(props) {
@@ -24,7 +33,8 @@ export default function ContentItem(props) {
                 title,
                 mainImage,
                 body
-            }`
+            }[0]`,
+            { slug }
         )
         .then((data) => setItemData(data))
         .catch(console.error);
@@ -37,7 +47,21 @@ export default function ContentItem(props) {
         console.log(itemData);
     }
 
+    const title = itemData.title;
+    const body = itemData.body;
+    const mainImage = itemData.mainImage;
+
     return (
-        <div/>
+        <div className='content' css={contentSx}>
+            <Themed.h1>{ title }</Themed.h1>
+            <img src={urlFor(mainImage).url()}/>
+            {body && (
+                <PortableText
+                    value={body}
+                    hardBreak={false}
+                    components={customComponents}
+                />
+            )}
+        </div>
     );
 }
