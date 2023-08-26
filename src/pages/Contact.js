@@ -7,7 +7,19 @@ import Loading from "../components/Loading";
 import { Themed } from "@theme-ui/mdx";
 
 const pageSx = {
-    textAlign: 'center',
+  textAlign: 'center',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  img: {
+      maxWidth: "50%",
+      paddingBottom: "1em",
+  },
+  "@media (max-width: 835px)": {
+      img: {
+          maxWidth: "100%",
+      }
+  },
 }
 
 export default function Contact() {

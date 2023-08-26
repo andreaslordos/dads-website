@@ -1,29 +1,29 @@
 import { Themed } from '@theme-ui/mdx';
-
+import { urlFor } from '../utils/urlFor';
 // // `components` object passed to PortableText
 
 export const customComponents = {
     block: {
       normal: ({ children }) => <Themed.p>{children}</Themed.p>,
-      h1: ({ children }) => <h1>{children}</h1>,
-      h2: ({ children }) => <h2>{children}</h2>,
-      h3: ({ children }) => <h3>{children}</h3>,
-      h4: ({ children }) => <h4>{children}</h4>,
-      h5: ({ children }) => <h5>{children}</h5>,
+      h1: ({ children }) => <Themed.h1>{children}</Themed.h1>,
+      h2: ({ children }) => <Themed.h2>{children}</Themed.h2>,
+      h3: ({ children }) => <Themed.h3>{children}</Themed.h3>,
+      h4: ({ children }) => <Themed.h4>{children}</Themed.h4>,
+      h5: ({ children }) => <Themed.h5>{children}</Themed.h5>,
       h6: ({ children }) => <h6>{children}</h6>,
       blockquote: ({ children }) => <blockquote>{children}</blockquote>,
       pre: ({ children }) => <pre>{children}</pre>,
     },
     list: {
       bullet: ({ children }) => <Themed.ul className="mt-xl">{children}</Themed.ul>,
-      number: ({ children }) => <ol className="mt-lg">{children}</ol>,
+      number: ({ children }) => <Themed.ol className="mt-lg">{children}</Themed.ol>,
     },
     listItem: {
       bullet: ({ children }) => (
         <li style={{ }}>{children}</li>
       ),
       number: ({ children }) => (
-        <li style={{ listStyleType: "disclosure-closed" }}>{children}</li>
+        <li style={{ }}>{children}</li>
       ),
     },
     marks: {
@@ -48,6 +48,7 @@ export const customComponents = {
       strikethrough: ({ children }) => <s>{children}</s>,
     },
     types: {
+      image: ({ value }) => <img src={urlFor(value).url()} alt="" />,
       callToAction: ({ value, isInline }) =>
         isInline ? (
           <a href={value.url}>{value.text}</a>
