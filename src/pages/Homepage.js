@@ -7,103 +7,101 @@ import { PortableText } from "@portabletext/react";
 import { customComponents } from "../theme/customComponents";
 
 const homepageSx = {
-    ".mainFlex": {
-        display: "flex",
-        flexDirection: "column",
+  ".mainFlex": {
+    display: "flex",
+    flexDirection: "column",
+  },
+  ".updatesAndPic": {
+    display: "flex",
+    flexDirection: "row",
+  },
+  ".updates": {
+    width: "70%",
+    padding: "3rem",
+    br: {
+      lineHeight: "0.5rem",
     },
+  },
+  ".pic": {
+    display: "flex",
+    alignItems: "center",
+    padding: "3rem",
+  },
+  ".welcomeMessage": {
+    paddingInline: "3rem",
+  },
+
+  "@media (max-width: 835px)": {
     ".updatesAndPic": {
-        display: "flex",
-        flexDirection: "row",
+      flexDirection: "column-reverse",
     },
     ".updates": {
-        width: "70%",
-        padding: "3rem",
-        br: {
-            lineHeight: "0.5rem",
-        },
+      width: "100%",
+      padding: "1.5rem",
     },
     ".pic": {
-        display: "flex",
-        alignItems: "center",
-        padding: "3rem",
+      padding: "1.5rem",
     },
     ".welcomeMessage": {
-        paddingInline: "3rem",
+      paddingInline: "0rem",
+      textAlign: "justify",
     },
-
-    "@media (max-width: 835px)": {
-        ".updatesAndPic": {
-            flexDirection: "column-reverse",
-        },
-        ".updates": {
-            width: "100%",
-            padding: "1.5rem",
-        },
-        ".pic": {
-            padding: "1.5rem",
-        },
-        ".welcomeMessage": {
-            paddingInline: "0rem",
-            textAlign: 'justify',
-        },
-    }
+  },
 };
 
 export default function Homepage() {
+  const [itemData, setItemData] = useState(null);
 
-    const [itemData, setItemData] = useState(null);
-
-    useEffect(() => {
-        sanityClient
-          .fetch(
-            `*[_type == "author"]  | order(publishedAt desc) {
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "author"]  | order(publishedAt desc) {
                 ...
             }[0]`
-          )
-          .then((data) => {
-            setItemData(data);
-          })
-          .catch(console.error);
-      }, []);
+      )
+      .then((data) => {
+        setItemData(data);
+      })
+      .catch(console.error);
+  }, []);
 
-    
-    if (!itemData) {
-        return Loading();
-    } else {
-        console.log(itemData);
-    }
+  if (!itemData) {
+    return Loading();
+  } else {
+    console.log(itemData);
+  }
 
-    const bio = itemData.bio;
-    const description = itemData.description;
-    const image = itemData.image;
+  const bio = itemData.bio;
+  const description = itemData.description;
+  const image = itemData.image;
 
-    return (
-        <div css={homepageSx}>
-            <div className="mainFlex">
-                <div className="welcomeMessage">
-                    {bio && (
-                        <PortableText
-                            value={bio}
-                            hardBreak={false}
-                            components={customComponents}
-                        />
-                    )}
-                </div>
-                <div className="updatesAndPic">
-                    <div className="updates">
-                        {description && (
-                        <PortableText
-                            value={description}
-                            hardBreak={false}
-                            components={customComponents}
-                            />
-                        )}
-                    </div>
-                    <div className="pic">
-                        <img src={urlFor(image).url()} alt="George Lordos"/>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div css={homepageSx}>
+      <div className="mainFlex">
+        <div className="welcomeMessage">
+          {bio && (
+            <PortableText
+              value={bio}
+              hardBreak={false}
+              components={customComponents}
+            />
+          )}
         </div>
-    );
+        <div className="updatesAndPic">
+          <div className="updates">
+            {description && (
+              <PortableText
+                value={description}
+                hardBreak={false}
+                components={customComponents}
+              />
+            )}
+          </div>
+          <div className="pic">
+            <img src={urlFor(image).url()} alt="George Lordos" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
