@@ -64,7 +64,7 @@ export default function ContentItem(props) {
     return (
         <div className='content' css={contentSx}>
             <Themed.h1>{ title }</Themed.h1>
-            <img src={urlFor(mainImage).url()}/>
+            <img src={urlFor(mainImage).url()} alt=""/>
             {body && (
                 <PortableText
                     value={body}

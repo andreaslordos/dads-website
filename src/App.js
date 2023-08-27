@@ -6,11 +6,11 @@ import { theme } from "./theme/theme"
 
 import Awards from "./pages/Awards" 
 import Contact from "./pages/Contact" 
-import Earth from "./pages/Earth" 
 import Papers from "./pages/Papers"
 import Press from "./pages/Press"
 import Space from "./pages/Space"
-import Updates from "./pages/Updates"  
+//import Updates from "./pages/Updates" 
+//import Earth from "./pages/Earth"
 import Homepage from "./pages/Homepage" 
 import ContentItem from "./pages/ContentItem"
 import PageNotFound from './pages/PageNotFound'

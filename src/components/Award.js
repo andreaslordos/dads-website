@@ -29,7 +29,7 @@ export default function Award(props) {
             <Themed.p>by {awardingbody}</Themed.p>
             <Themed.h3>for {prizefor}</Themed.h3>
             <br/>
-            { image ? <img src={urlFor(image).width(200).url()} /> : <></>}
+            { image ? <img src={urlFor(image).width(200).url()} alt="logo of awarding body"/> : <></>}
             <br/>
             <hr />
         </div>

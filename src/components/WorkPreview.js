@@ -25,7 +25,7 @@ export default function WorkPreview(props) {
     const HeadingSize = isMob ? Themed.h2 : Themed.h3;
     return (
         <div sx={previewSx}>
-            <img src={urlFor(image).url()}/>
+            <img src={urlFor(image).url()} alt=""/>
             <br/>
             <HeadingSize>{title}</HeadingSize>
             <br />

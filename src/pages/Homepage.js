@@ -1,12 +1,11 @@
 /** @jsxImportSource theme-ui */
-
-import { Themed } from "@theme-ui/mdx";
 import { useEffect, useState } from "react";
 import { sanityClient } from "../client";
 import Loading from "../components/Loading";
 import { urlFor } from "../utils/urlFor";
 import { PortableText } from "@portabletext/react";
 import { customComponents } from "../theme/customComponents";
+
 const homepageSx = {
     ".mainFlex": {
         display: "flex",
@@ -101,7 +100,7 @@ export default function Homepage() {
                         )}
                     </div>
                     <div className="pic">
-                        <img src={urlFor(image).url()}/>
+                        <img src={urlFor(image).url()} alt="George Lordos"/>
                     </div>
                 </div>
             </div>
