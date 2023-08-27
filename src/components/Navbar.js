@@ -18,6 +18,7 @@ const navbarSx = {
     "@media (max-width: 835px)": {
       width: "100%",
       padding: '0.8rem 0.5rem',
+      justifyContent: 'center',
     }
 };
 
