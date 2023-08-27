@@ -1,6 +1,7 @@
 /** @jsxImportSource theme-ui */
 import { Themed } from '@theme-ui/mdx';
 import { urlFor } from '../utils/urlFor';
+import { useIsMobile } from '../utils/isMobile';
 
 const previewSx = {
     textAlign: 'center',
@@ -20,11 +21,13 @@ const previewSx = {
 
 export default function WorkPreview(props) {
     const { title, image } = props;
+    const isMob = useIsMobile();
+    const HeadingSize = isMob ? Themed.h2 : Themed.h3;
     return (
         <div sx={previewSx}>
             <img src={urlFor(image).url()}/>
             <br/>
-            <Themed.h3>{title}</Themed.h3>
+            <HeadingSize>{title}</HeadingSize>
             <br />
             <br/>
         </div>

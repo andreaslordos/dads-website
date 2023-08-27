@@ -16,10 +16,11 @@ const navbarSx = {
     width: "80%",
 
     "@media (max-width: 835px)": {
+      borderBottom: '1px solid #ccc',
       width: "100%",
       padding: '0.8rem 0.5rem',
       justifyContent: 'center',
-      marginBottom: "0rem",
+      marginBottom: "1rem",
     }
 };
 
