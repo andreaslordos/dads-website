@@ -17,7 +17,7 @@ const navbarSx = {
 
     "@media (max-width: 835px)": {
       width: "100%",
-      padding: '1.5rem 0.5rem',
+      padding: '0.8rem 0.5rem',
     }
 };
 
@@ -43,7 +43,7 @@ const linkSx = {
 export default function Navbar() {
   const location = useLocation();
   const sections = [
-    "George Lordos", "Space", "Earth", "Papers", "Awards", "Press", "Contact"
+    "George Lordos", "Space", "Papers", "Awards", "Press", "Contact"
   ];
   
   return (

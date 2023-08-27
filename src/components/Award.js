@@ -9,7 +9,11 @@ const awardSx = {
     alignItems: 'center',
     hr: {
         width: '100%',
-    }
+    },
+    "@media (max-width: 835px)": {
+        br: {
+        },
+    },
 };
 
 export default function Award(props) {
@@ -28,7 +32,6 @@ export default function Award(props) {
             { image ? <img src={urlFor(image).width(200).url()} /> : <></>}
             <br/>
             <hr />
-            <br/>
         </div>
     );
 }

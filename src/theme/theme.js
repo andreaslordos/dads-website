@@ -43,35 +43,35 @@ export const theme = {
       },
       h1: {
         variant: "text.heading",
-        fontSize: 4,
+        fontSize: [2, 4],
       },
       h2: {
         variant: "text.body",
-        fontSize: 3,
+        fontSize: [1, 3],
       },
       h3: {
         variant: "text.body",
-        fontSize: 2,
+        fontSize: [0, 2],
       },
       h4: {
         variant: "text.body",
-        fontSize: 1,
+        fontSize: [0, 1],
       },
       h5: {
         variant: "text.body",
-        fontSize: 1,
+        fontSize: [0, 1],
       },
       p: {
         variant: "text.body",
-        fontSize: 1,
+        fontSize: [0, 1],
       },
       ul: {
         variant: "text.body",
-        fontSize: 1,
+        fontSize: [0, 1],
       },
       ol: {
         variant: "text.body",
-        fontSize: 1,
+        fontSize: [0, 1],
       },
       code: {
         fontFamily: "monospace",
