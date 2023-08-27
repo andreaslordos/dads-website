@@ -22,7 +22,6 @@ import ScrollToTop from "./components/ScrollToTop";
 const appSx = {
   width: "67%",
   display: "flex",
-  minHeight: "100vh",
   flexDirection: "column",
   marginTop: "0em",
   minHeight: "-webkit-fill-available",
@@ -54,8 +53,9 @@ function App() {
                 <ScrollToTop/>
                 <Routes>
                   <Route element={<Homepage />} path="/" exact />
+                  {/*<Route element={<Updates />} path="/updates" exact />*/}
                   <Route element={<Space />} path="/space" exact />
-                  <Route element={<Earth />} path="/earth" exact />
+                  {/*<Route element={<Earth />} path="/earth" exact />*/}
                   <Route element={<Papers />} path="/papers" exact />
                   <Route element={<Awards />} path="/awards" exact />
                   <Route element={<Press />} path="/press" exact />
