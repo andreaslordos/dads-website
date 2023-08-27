@@ -19,6 +19,7 @@ const navbarSx = {
       width: "100%",
       padding: '0.8rem 0.5rem',
       justifyContent: 'center',
+      marginBottom: "0rem",
     }
 };
 
