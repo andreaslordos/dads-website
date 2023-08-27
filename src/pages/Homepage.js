@@ -45,6 +45,7 @@ const homepageSx = {
         },
         ".welcomeMessage": {
             paddingInline: "0rem",
+            textAlign: 'justify',
         },
     }
 };

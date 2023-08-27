@@ -22,6 +22,10 @@ const contentSx = {
     "@media (max-width: 835px)": {
         img: {
             maxWidth: "100%",
+        },
+        textAlign: 'justify',
+        h1: {
+            textAlign: 'center',
         }
     },
 };
