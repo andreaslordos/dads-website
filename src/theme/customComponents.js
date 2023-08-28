@@ -49,6 +49,7 @@ export const customComponents = {
   },
   types: {
     image: ({ value }) => <img src={urlFor(value).url()} alt="" />,
+    embed: ({ value }) => <iframe src={value.embedurl} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"></iframe>,
     callToAction: ({ value, isInline }) =>
       isInline ? (
         <a href={value.url}>{value.text}</a>

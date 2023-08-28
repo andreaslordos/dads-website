@@ -26,6 +26,11 @@ const appSx = {
   marginTop: "0em",
   minHeight: "-webkit-fill-available",
 
+  iframe: {
+    aspectRatio: "16/9",
+    width: "100%",
+  },
+
   "@media (max-width: 835px)": {
     width: "85%",
   },
