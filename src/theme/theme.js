@@ -6,7 +6,7 @@ export const theme = {
     heading: "EB Garamond, serif",
     monospace: "monospace",
   },
-  fontSizes: [18, 23, 25, 32, 43],
+  fontSizes: [18, 23, 25, 32, 43, 19],
   fontWeights: {
     body: 400,
     medium: 500,
@@ -55,23 +55,23 @@ export const theme = {
     },
     h4: {
       variant: "text.body",
-      fontSize: [0, 1],
+      fontSize: [5, 1],
     },
     h5: {
       variant: "text.body",
-      fontSize: [0, 1],
+      fontSize: [5, 1],
     },
     p: {
       variant: "text.body",
-      fontSize: [0, 1],
+      fontSize: [5, 1],
     },
     ul: {
       variant: "text.body",
-      fontSize: [0, 1],
+      fontSize: [5, 1],
     },
     ol: {
       variant: "text.body",
-      fontSize: [0, 1],
+      fontSize: [5, 1],
     },
     code: {
       fontFamily: "monospace",
