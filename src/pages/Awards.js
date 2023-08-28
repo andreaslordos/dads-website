@@ -42,6 +42,7 @@ export default function Awards() {
             awardingbody={award.awardingbody}
             image={award.image}
             prizefor={award.prizefor}
+            link={award.link}
           />
         );
       })}

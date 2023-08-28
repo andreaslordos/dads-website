@@ -42,5 +42,11 @@ export default defineType({
       type: 'string',
       validation: Rule => Rule.required().min(4).max(4)
     }),
+    defineField({
+      name: 'link',
+      title: 'Link',
+      description: 'Optional',
+      type: 'url',
+    }),
   ],
 })
