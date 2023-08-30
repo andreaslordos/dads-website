@@ -34,6 +34,7 @@ export default function Contact() {
       )
       .then((data) => {
         setItemData(data);
+        document.title = "Contact";
       })
       .catch(console.error);
   }, []);

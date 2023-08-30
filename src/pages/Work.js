@@ -53,7 +53,10 @@ export default function Work(props) {
                 _id
             }`
       )
-      .then((data) => setItemData(data))
+      .then((data) => {
+        setItemData(data);
+        document.title = props.title;
+      })
       .catch(console.error);
   }, [props.title]);
 

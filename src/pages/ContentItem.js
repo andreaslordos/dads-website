@@ -46,7 +46,10 @@ export default function ContentItem(props) {
             }[0]`,
         { slug }
       )
-      .then((data) => setItemData(data))
+      .then((data) => {
+        setItemData(data);
+        document.title = data.title;
+      })
       .catch(console.error);
   }, [slug]);
 

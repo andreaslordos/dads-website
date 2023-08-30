@@ -61,6 +61,7 @@ export default function Homepage() {
       )
       .then((data) => {
         setItemData(data);
+        document.title = 'George Lordos'
       })
       .catch(console.error);
   }, []);

@@ -21,6 +21,7 @@ export default function Press() {
       )
       .then((data) => {
         setItemData(data);
+        document.title = 'Press';
       })
       .catch(console.error);
   }, []);

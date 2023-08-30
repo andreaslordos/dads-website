@@ -21,6 +21,7 @@ export default function Awards() {
       )
       .then((data) => {
         setItemData(data);
+        document.title = "Awards";
       })
       .catch(console.error);
   }, []);

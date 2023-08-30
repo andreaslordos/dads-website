@@ -24,6 +24,7 @@ export default function Papers() {
       )
       .then((data) => {
         setItemData(data);
+        document.title = 'Papers';
       })
       .catch(console.error);
   }, []);
