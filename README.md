@@ -1,18 +1,24 @@
-# Getting Started with Create React App
+# Personal Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a personal portfolio website built with Next.js and Sanity CMS.
+
+## Tech Stack
+
+- **Next.js 14** - React framework with ISR (Incremental Static Regeneration)
+- **Sanity.io** - Headless CMS for content management
+- **Theme UI** - Styling framework
+- **Vercel** - Hosting and deployment
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run dev`
 
-Runs the app in the development mode.\
+Runs the app in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The page will reload when you make changes.
 
 ### `npm test`
 
@@ -21,50 +27,31 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production.\
+Creates an optimized production build with static HTML pages.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Starts the production server after building.
 
-### `npm run eject`
+## Deployment
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This site is deployed on Vercel with automatic deployments on every push.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Environment Variables
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Required environment variables for deployment:
+- `NEXT_PUBLIC_SANITY_PROJECT_ID` - Sanity project ID
+- `NEXT_PUBLIC_SANITY_DATASET` - Sanity dataset name
+- `SANITY_API_VERSION` - Sanity API version
+- `REVALIDATE_SECRET` - Secret for webhook revalidation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Content Management
+
+Content is managed through Sanity Studio. When content is published, Sanity webhooks trigger on-demand revalidation of the affected pages.
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Sanity Documentation](https://www.sanity.io/docs)
+- [Theme UI Documentation](https://theme-ui.com/)
