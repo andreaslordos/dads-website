@@ -2,6 +2,7 @@
 import { ThemeUIProvider } from "theme-ui";
 import { theme } from "../lib/theme/theme";
 import Navbar from "../src/components/Navbar";
+import "../lib/theme/global.css";
 
 const containerSx = {
   display: "flex",
