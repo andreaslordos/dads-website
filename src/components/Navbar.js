@@ -1,5 +1,6 @@
 /** @jsxImportSource theme-ui */
-import { useLocation, Link } from "react-router-dom";
+import { useRouter } from "next/router";
+import Link from "next/link";
 import { Themed } from "@theme-ui/mdx";
 // Modified styles for responsiveness
 const navbarSx = {
@@ -44,7 +45,7 @@ const linkSx = {
 };
 
 export default function Navbar() {
-  const location = useLocation();
+  const router = useRouter();
   const sections = [
     "George Lordos",
     "Space",
@@ -66,9 +67,9 @@ export default function Navbar() {
         return (
           <Link
             key={index}
-            to={path}
+            href={path}
             sx={linkSx}
-            className={location.pathname === path ? "active" : ""}
+            className={router.pathname === path ? "active" : ""}
           >
             <Themed.h3>{section}</Themed.h3>
           </Link>

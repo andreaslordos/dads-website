@@ -7,29 +7,22 @@
     "@sanity/client": "^6.4.9",
     "@sanity/image-url": "^1.0.2",
     "@sanity/orderable-document-list": "^1.1.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "@theme-ui/mdx": "^0.16.1",
-    "firebase": "^10.3.0",
+    "next": "^14.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.15.0",
-    "react-scripts": "5.0.1",
-    "theme-ui": "^0.16.1",
-    "web-vitals": "^2.1.4"
+    "theme-ui": "^0.16.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "sitemap": "babel-node src/sitemap-generator.js"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "next/core-web-vitals"
     ],
     "rules": {
       "react/jsx-pascal-case": [
@@ -61,6 +54,8 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.1",
     "react-router-sitemap-generator": "^0.0.8"
   }
 }
